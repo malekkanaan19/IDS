@@ -1,0 +1,17 @@
+using meeting.core.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace meeting.core.Interfaces
+
+{
+    public interface IUser : IRepository<User>
+    {
+        Task<IEnumerable<User>> GetAllUsersAsync();
+        Task<User> GetUsersByIdAsync(int id);
+
+    }
+}
