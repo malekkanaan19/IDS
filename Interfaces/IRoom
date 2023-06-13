@@ -1,0 +1,16 @@
+using meeting.core.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace meeting.core.Interfaces
+{
+    public interface IRoom : IRepository<meeting.core.Models.Room>
+    {
+        Task<IEnumerable<meeting.core.Models.Room>> GetAllRoomsAsync();
+        Task<meeting.core.Models.Room> GetRoomByIdAsync(int id);
+
+    }
+}
